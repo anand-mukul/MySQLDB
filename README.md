@@ -95,6 +95,22 @@ This project involves setting up a MySQL database named `inventoryDB` and perfor
   DELETE FROM products WHERE name = 'Coffee Mug';
   ```
 
+## Execution Proofs
+
+Below are screenshots showing the successful execution of the above commands:
+
+1. **Creating the Database and Table, and Inserting Data:**
+
+   ![Creating Database and Table](/assets/Adding%20the%20table.png)
+
+2. **Performing Operations:**
+
+   ![Performing Operations](/assets/after-operations.png)
+
+3. **Reviewing Data After Operations:**
+
+   ![Reviewing Data](/assets/the-tables.png)
+
 ## Conclusion
 
 This project demonstrates how to set up a MySQL database and perform basic CRUD (Create, Read, Update, Delete) operations. Follow the steps carefully to successfully set up and manage your `inventoryDB`.
