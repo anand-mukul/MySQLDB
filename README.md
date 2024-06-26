@@ -19,9 +19,9 @@ This project involves setting up a MySQL database named `inventoryDB` and perfor
 
 - Open the **Windows Command Prompt**.
 - Run the following command to check if MySQL is installed:
-  \`\`\`bash
+  ```bash
   mysql --version
-  \`\`\`
+  ```
 - If you encounter an error, add the MySQL bin directory to your system's PATH variable:
   1. Right Click on **This PC** or **My Computer**.
   2. Go to **Properties**.
@@ -33,15 +33,15 @@ This project involves setting up a MySQL database named `inventoryDB` and perfor
 ### 3. Run the MySQL Server
 
 - Start the MySQL server by opening the **Windows Command Prompt** and running:
-  \`\`\`bash
+  ```bash
   mysql -u root -p
-  \`\`\`
+  ```
 - Enter your MySQL root password when prompted.
 
 ### 4. Create and Setup the Database
 
 - In the MySQL command line, create the database and the `products` table:
-  \`\`\`sql
+  ```sql
   CREATE DATABASE inventoryDB;
   USE inventoryDB;
 
@@ -53,12 +53,12 @@ This project involves setting up a MySQL database named `inventoryDB` and perfor
       quantity INT,
       category VARCHAR(50)
   );
-  \`\`\`
+  ```
 
 ### 5. Insert Sample Data into `products` Table
 
 - Insert sample product records:
-  \`\`\`sql
+  ```sql
   INSERT INTO products (name, description, price, quantity, category)
   VALUES 
   ('Laptop', '14 inch laptop with 8GB RAM', 799.99, 10, 'Electronics'),
@@ -66,34 +66,34 @@ This project involves setting up a MySQL database named `inventoryDB` and perfor
   ('Notebook', 'A5 notebook with lined pages', 5.99, 200, 'Stationery'),
   ('Wireless Mouse', 'Bluetooth wireless mouse', 25.49, 50, 'Electronics'),
   ('Coffee Mug', 'Ceramic mug with 300ml capacity', 12.99, 75, 'Kitchenware');
-  \`\`\`
+  ```
 
 ### 6. Perform SQL Queries
 
 - Retrieve all products:
-  \`\`\`sql
+  ```sql
   SELECT * FROM products;
-  \`\`\`
+  ```
 
 - Retrieve products with a price less than a specified amount (e.g., less than $30):
-  \`\`\`sql
+  ```sql
   SELECT * FROM products WHERE price < 30.00;
-  \`\`\`
+  ```
 
 - Retrieve products with more than a specified quantity in stock (e.g., more than 20 units):
-  \`\`\`sql
+  ```sql
   SELECT * FROM products WHERE quantity > 20;
-  \`\`\`
+  ```
 
 - Update the price of a specific product (e.g., change the price of the 'Wireless Mouse' to $27.99):
-  \`\`\`sql
+  ```sql
   UPDATE products SET price = 27.99 WHERE name = 'Wireless Mouse';
-  \`\`\`
+  ```
 
 - Delete a product from the `products` table (e.g., remove the 'Coffee Mug'):
-  \`\`\`sql
+  ```sql
   DELETE FROM products WHERE name = 'Coffee Mug';
-  \`\`\`
+  ```
 
 ## Conclusion
 
